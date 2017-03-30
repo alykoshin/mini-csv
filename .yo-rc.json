@@ -1,0 +1,12 @@
+{
+  "generator-mini-package": {
+    "promptValues": {
+      "pkgDesc": "Parse/stringify data in CSV format",
+      "keywords": [
+        "csv",
+        "parse",
+        "stringify"
+      ]
+    }
+  }
+}
