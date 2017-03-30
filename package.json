@@ -45,8 +45,7 @@
   },
   "homepage": "https://github.com/alykoshin/mini-csv",
   "dependencies": {
-    "mini-deep-assign": "0.0.6",
-    "minimist": "^1.2.0"
+    "mini-deep-assign": "0.0.6"
   },
   "devDependencies": {
     "chai": "^3.5.0",
