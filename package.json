@@ -13,7 +13,7 @@
     "_check-changes": "echo '* Checking if git directory is clean... '; bash -c '[[ -z $(git status -uno --porcelain) ]]'",
     "update-deps": "npm run _check-changes && npm run _deps-update && npm test && git commit -am 'updated deps'",
     "lint": "eslint -f unix .",
-    "inspect": "jsinspect",
+    "inspect": "jsinspect lib/",
     "pretest": "npm run lint && npm run inspect && npm run nsp && npm run _deps-check",
     "_test": "node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/**/*",
     "test": "npm run _test",
@@ -32,7 +32,7 @@
     "coverall": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "keywords": [
-      "csv,parse,stringify"
+    "csv,parse,stringify"
   ],
   "author": "Alexander <alykoshin@gmail.com>",
   "license": "MIT",
@@ -45,6 +45,7 @@
   },
   "homepage": "https://github.com/alykoshin/mini-csv",
   "dependencies": {
+    "mini-deep-assign": "0.0.6",
     "minimist": "^1.2.0"
   },
   "devDependencies": {
