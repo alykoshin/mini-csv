@@ -45,6 +45,7 @@
   },
   "homepage": "https://github.com/alykoshin/mini-csv",
   "dependencies": {
+    "lodash": "^4.17.4",
     "mini-deep-assign": "0.0.6"
   },
   "devDependencies": {
