@@ -1,0 +1,7 @@
+boolean-column,number-column,string-column
+false,0,string0
+false,1,"string1"
+true,2,"string2"
+,,
+null,null,null
+undefined,undefined,undefined

@@ -1,11 +1,7 @@
 {
 
-  "ecmaFeatures": {
-    "globalReturn": true
-  },
-
   "env": {
-    "es6": false
+    "es6": true
   }
 
 }

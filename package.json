@@ -46,18 +46,18 @@
   "homepage": "https://github.com/alykoshin/mini-csv",
   "dependencies": {
     "lodash": "^4.17.4",
-    "mini-deep-assign": "0.0.6"
+    "mini-deep-assign": "0.0.8"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.1.2",
     "chai-things": "^0.2.0",
-    "coveralls": "^2.12.0",
-    "eslint": "^3.18.0",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.10.0",
     "istanbul": "^0.4.5",
-    "jshint": "^2.9.4",
-    "jsinspect": "^0.12.2",
-    "mocha": "^3.2.0",
-    "mockery": "^2.0.0",
-    "sinon": "^2.1.0"
+    "jshint": "^2.9.5",
+    "jsinspect": "^0.12.7",
+    "mocha": "^4.0.1",
+    "mockery": "^2.1.0",
+    "sinon": "^4.1.2"
   }
 }
