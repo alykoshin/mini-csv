@@ -1,6 +1,6 @@
 {
   "name": "mini-csv",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Parse/stringify data in CSV format",
   "main": "./index.js",
   "engines": {
