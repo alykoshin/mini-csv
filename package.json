@@ -7,14 +7,14 @@
     "node": ">=4"
   },
   "scripts": {
-    "nsp": "nsp check",
-    "_deps-check": "npm-check-updates --error-level 2",
+    "_npm-audit": "npm audit || echo '\n*** Please check warnings above ***\n' && npm audit --production --audit-level high && echo '\n*** npm audit reported no high-level vulnerabilities for production configuration ***\n' ",
+    "_deps-check": "npm-check-updates --errorLevel 2",
     "_deps-update": "echo '* Updating packages versions... '; npm-check-updates -u --upgradeAll --error-level 1 && npm install",
     "_check-changes": "echo '* Checking if git directory is clean... '; bash -c '[[ -z $(git status -uno --porcelain) ]]'",
     "update-deps": "npm run _check-changes && npm run _deps-update && npm test && git commit -am 'updated deps'",
     "lint": "eslint -f unix .",
     "inspect": "jsinspect lib/",
-    "pretest": "npm run lint && npm run inspect && npm run nsp && npm run _deps-check",
+    "pretest": "npm run lint && npm run inspect && npm run _npm-audit && npm run _deps-check",
     "_test": "node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/**/*",
     "test": "npm run _test",
     "__test": "echo \"Warning: no test specified\" && exit 0",
@@ -45,19 +45,19 @@
   },
   "homepage": "https://github.com/alykoshin/mini-csv",
   "dependencies": {
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "mini-deep-assign": "0.0.8"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.3.4",
     "chai-things": "^0.2.0",
-    "coveralls": "^3.0.0",
-    "eslint": "^4.10.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.23.0",
     "istanbul": "^0.4.5",
-    "jshint": "^2.9.5",
+    "jshint": "^2.12.0",
     "jsinspect": "^0.12.7",
-    "mocha": "^4.0.1",
+    "mocha": "^8.3.2",
     "mockery": "^2.1.0",
-    "sinon": "^4.1.2"
+    "sinon": "^10.0.0"
   }
 }
