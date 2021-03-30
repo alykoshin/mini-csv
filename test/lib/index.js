@@ -128,6 +128,7 @@ describe('# csv', function() {
 
     beforeEach(function() {
       stringify = require('../../lib/index').stringify();
+      //stringify.on('error', (e) => { console.log(e); })
     });
 
     describe('# _value', function() {
@@ -142,7 +143,10 @@ describe('# csv', function() {
     describe('# _line', function() {
 
       it('# emit error on comma and return opt.null', function(done) {
-        stringify.on('error', function(msg) { done(); });
+        stringify.on('error', function(msg) {
+          console.log('error emitted.')
+          done();
+        });
         expect( stringify._line([','], { null: 'null', EOL: 'EOL', commaNoLine: true }) ).eql('') ;
       });
 
